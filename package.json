@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "vite": "^6.0.2"
+  },
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "This is my Portfolio web site created with basic HTML. CSS and JavaScript.\r No Framework or CMS were used to create this web site.",
+  "main": "script.min.js",
+  "devDependencies": {
+    "vite-plugin-copy": "^0.1.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,481 @@
+/*****V A R I A B L E S*****/
+@import url("https://fonts.cdnfonts.com/css/berlin-sans-fb-demi");
+:root {
+  --orange: #fa9005;
+  --darkBlue: #111b37;
+  --lightBlue: #0682f7;
+}
+
+/*****P A G E*****/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Overflow : hidden // to hide the main scroll bar for the full page*/
+body {
+  overflow: hidden;
+  font-family: "League Spartan", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.page_wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 0.625rem;
+}
+
+/*****N A V B A R*****/
+/*Display background color black on navbar scroll*/
+.navbar {
+  max-height: 3.875rem;
+}
+.navbarScroll.navbarDark {
+  background: rgb(0, 0, 0);
+  box-shadow: 0px 10px 16px -6px rgba(0, 0, 0, 0.75);
+  filter: opacity(0.92);
+}
+
+a,
+a.nav-link.nav_text {
+  font-weight: 700;
+  color: aliceblue;
+  margin: 0rem 0.3rem 0rem 0.3rem;
+  text-shadow: 1px 3px 2px black;
+}
+
+a,
+a.nav-link.nav_text:hover {
+  color: var(--lightBlue);
+}
+
+.brand-logo {
+  height: 4.375%;
+  width: 4.375%;
+  padding-bottom: 0.2rem;
+  margin-right: -0.625rem;
+}
+
+/*****H O M E*****/
+
+/*This creates the elusion of scrolling the page when in reality we are scrolling inside the wrapping section*/
+
+/*parallax background image*/
+.home_bg {
+  height: 100vh;
+  width: 100%;
+  background: url("./public/images/main-bg1.webp") no-repeat right;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+  transform: translateZ(-10px) scale(2.1);
+  transform-style: preserve-3d;
+}
+
+/*Parallax foreground image*/
+/*.home_fg {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+  transform: translateZ(5px) scale(0.6);
+  transform-style: preserve-3d;
+}*/
+
+/*Text css over the parallax background*/
+/*Aligns the title and slogan to the center of the home section*/
+.home_text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/*Dimensions and styling of the title*/
+.home_title {
+  font-size: 7rem;
+  font-style: italic;
+  font-family: "Berlin Sans FB Demi", sans-serif;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  transform: translateZ(0px);
+  text-shadow: 1px 3px 2px black;
+}
+
+/*Dimensions and styling of the slogan*/
+.slogan {
+  font-size: 3rem;
+  text-shadow: 1px 3px 2px black;
+  font-family: "League Spartan", sans-serif;
+}
+
+/*****A B O U T*****/
+#about {
+  background-color: rgb(235, 232, 232);
+  color: rgb(0, 0, 0);
+  padding-top: 3.125%;
+  padding-bottom: 3.125%;
+  z-index: 999;
+}
+
+/*Profile Image*/
+.profile_img_frame {
+  padding-right: 7rem;
+}
+
+.profile_img {
+  width: 100%;
+  height: auto;
+  margin-top: -20%;
+  border-radius: 10px;
+  box-shadow: -50px -50px 0 -43px var(--orange), 50px 50px 0 -43px var(--orange),
+    5px 6px 13px -1px rgba(0, 0, 0, 0.75);
+
+  transform-style: preserve-3d;
+  transform: perspective(5000px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+}
+
+.profile_img::after {
+  inset: -1rem;
+  background: black;
+  border-radius: 1rem;
+  transform-style: preserve-3d;
+  transform: translateZ(-5px);
+}
+
+/*About section text*/
+.about_title {
+  font-family: "League Spartan", sans-serif;
+  margin: -2.5rem 0rem 4rem 0rem;
+}
+
+.about_description {
+  font-size: larger;
+}
+
+.about_ul {
+  padding-top: 2rem;
+}
+
+.about_li {
+  margin: 3rem 0rem 3rem 0rem;
+}
+
+.about_li_text {
+  font-size: large;
+  font-weight: bold;
+}
+
+/*****S K I L L S*****/
+#skills {
+  background-color: var(--darkBlue);
+  color: white;
+  padding-top: 3.125%;
+  padding-bottom: 3.125%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.skills_title {
+  font-family: "League Spartan", sans-serif;
+  margin-bottom: 7rem;
+  color: var(--orange);
+}
+
+.logo_wrapper {
+  text-align: center;
+  margin: 0rem 10rem 0rem 10rem;
+}
+
+.skills_logo.skills_logo_img {
+  margin-top: 0.6rem;
+  height: 4.375rem;
+  width: 4.375rem;
+}
+
+.sills_text {
+  padding-top: 0.5rem;
+  font-size: larger;
+  font-weight: bold;
+}
+
+/*This css controlls the properties of the arrow buttons in the carousel*/
+/*The hex code after fill='%23 controlls the color of the arrows*/
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fa9005' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fa9005' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+/*****P O R T F O L I O******/
+#portfolio {
+  background-color: rgb(235, 232, 232);
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio_title {
+  font-family: "League Spartan", sans-serif;
+  text-align: center;
+}
+
+#portfolio .box_wrapper {
+  padding-top: 3%;
+  justify-content: space-between;
+}
+
+/*Part of the box image slide effect happens here*/
+/*Background-position: top;*/
+#portfolio .box_wrapper .box {
+  width: 36.25rem;
+  height: 25rem;
+  background: #000;
+  background-position: top;
+  border-radius: 5px;
+  margin: 2rem 0rem 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  transition: background-position 9s ease;
+  box-shadow: -24px -16px 33px -19px rgba(0, 0, 0, 0.75) inset;
+}
+
+/*Boxes are numbered from left to right starting from top*/
+#portfolio .box_wrapper .box.box1 {
+  background: url(./public/images/teclexi.com_home_.webp);
+  background-size: cover;
+}
+
+#portfolio .box_wrapper .box.box2 {
+  background: url(./public/images/banking-website.webp);
+  background-size: cover;
+}
+
+#portfolio .box_wrapper .box.box3 {
+  background: url(./public/images/gee.webp);
+  background-size: cover;
+}
+
+#portfolio .box_wrapper .box.box4 {
+  background: url(#);
+  background-size: cover;
+}
+
+/*Part of the box image slide effect happens here*/
+/*Background-position: bottom;*/
+#portfolio .box_wrapper .box:hover {
+  background-position: bottom;
+}
+
+.overlay_btn {
+  border-radius: 50%;
+  height: 2.7rem;
+  width: 2.7rem;
+  position: relative;
+  font-size: x-large;
+  font-weight: bolder;
+  top: 10%;
+  left: 4%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border: 1px solid #111b37;
+  box-shadow: 0px 3px 12px -1px rgba(0, 0, 0, 0.5);
+}
+
+.overlay_btn:hover {
+  box-shadow: 0px 3px 5px -2px rgba(0, 0, 0, 0.5) inset;
+}
+
+/* Initially hide the overlays */
+.overlay {
+  display: none;
+}
+
+.overlay.overlay-show {
+  width: 36.25rem;
+  height: 25rem;
+  background: linear-gradient(transparent, #1c1c1cea 68%);
+  border-radius: 5px;
+  position: static;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.overlay_title {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 0.3125rem;
+  margin-top: 30%;
+  font-size: 1.875rem;
+  letter-spacing: 0.125rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+.overlay_text {
+  color: white;
+}
+
+.portfolio_icons {
+  align-items: center;
+}
+
+.portfolio_icons a {
+  margin: 0;
+  padding: 0;
+  margin-top: 0.625rem;
+  color: white;
+  padding: 0.3125rem 0.9375rem;
+}
+
+a.visite_btn {
+  width: 9rem;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.fa-github:hover,
+.visite_btn:hover {
+  color: var(--lightBlue);
+}
+
+/*****C O N T A C T*****/
+#contact {
+  background: url(./public/images/main-bg1.webp);
+  color: white;
+  padding-bottom: 4rem;
+  padding-top: 3.125rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.contact_title {
+  font-family: "League Spartan", sans-serif;
+}
+
+.form_wrapper {
+  width: 18.75rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Social media icons styling */
+.social-icons {
+  font-size: 2.25rem;
+  cursor: pointer;
+  margin-right: 2.5rem;
+}
+
+.fa-facebook:hover,
+.fa-x-twitter:hover,
+.fa-linkedin:hover {
+  color: var(--lightBlue);
+}
+
+.fab {
+  color: #c9c9cc;
+}
+
+/*****F O O T E R*****/
+#footer {
+  margin-top: 3rem;
+  margin-bottom: -4rem;
+  background-color: #000000;
+  text-align: center;
+  color: #c9c9cc;
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  /*****H O M E*****/
+
+  /*Parallax foreground image ajusted for screen size > 600px*/
+  .home_fg {
+    height: 100vh;
+    width: 300%;
+    margin-left: -65%;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    transform: translateZ(5px) scale(0.5);
+    transform-style: preserve-3d;
+  }
+
+  /*Dimensions and styling of the title with screen size > 600px*/
+  .home_title {
+    font-size: 3.5rem;
+    font-style: italic;
+    font-family: "Berlin Sans FB Demi", sans-serif;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    transform: translateZ(0px);
+    text-shadow: 1px 1px 2px black;
+  }
+
+  /*Dimensions and styling of the slogan with screen size > 600px*/
+  .slogan {
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px black;
+    font-family: "League Spartan", sans-serif;
+  }
+
+  /*****A B O U T*****/
+
+  #about {
+    background-color: rgb(235, 232, 232);
+    color: rgb(0, 0, 0);
+    padding-top: 3.125%;
+    padding-bottom: 3.125%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #about .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*Profile Image*/
+
+  .profile_img {
+    width: 50%;
+    height: auto;
+    margin-top: -20%;
+    border-radius: 10px;
+    box-shadow: -50px -50px 0 -43px var(--orange),
+      50px 50px 0 -43px var(--orange), 5px 6px 13px -1px rgba(0, 0, 0, 0.75);
+    transform-style: preserve-3d;
+    transform: none;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+}

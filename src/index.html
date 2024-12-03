@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Portfolio B.Silva</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- linking css file -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="style.min.css" /> -->
+    <!-- bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/748be110cf.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
+      <div class="container navbar_elements">
+        <img
+          class="brand-logo"
+          src="./public/images/noBackground-lowrez.webp"
+          alt=""
+        />
+        <a class="navbar-brand" href="#">B.Silva</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item active">
+              <a class="nav-link nav_text" href="#home">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav_text" href="#about"> À propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav_text" href="#skills">Compétences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav_text" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav_text" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- WRAPPER FOR THE FULL PAGE TO CREATE PARALLAX EFFECT-->
+    <div class="page_wrapper">
+      <!-- HOME SECTION -->
+      <section class="home_bg" id="home">
+        <img class="home_fg" src="./public/images/main-bg2.webp" alt="" />
+        <div class="container-fluid home_text_wrapper">
+          <div class="row row-cols-2 row-cols-sm-1">
+            <div class="home_text">
+              <h2 class="home_title">BRUNO SILVA</h2>
+              <p class="slogan">Passionné et dévoué Full-Stack Développeur</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about">
+        <div class="container mt-4 pt-4">
+          <h1 class="text-center about_title">À propos de moi</h1>
+          <div class="row mt-4 d-flex justify-content-evenly about_wrapper">
+            <div class="profile_img_frame col-lg-3">
+              <img
+                src="./public/images/profile_photo.webp"
+                class="profile_img"
+                alt=""
+              />
+            </div>
+
+            <div class="col-lg-8 about_description">
+              <p>
+                Depuis 2022, je me forme activement au développement web et
+                logiciel, avec 3 certifications (WebProgrammer, Mobile Web
+                Application Developer, Python Software Engineer) et un diplôme
+                en Développement d’Applications Web (Full-Stack). Passionné par
+                le code, je conçois et développe des sites et applications web
+                modernes, en alliant design et fonctionnalité pour créer des
+                solutions intuitives et efficaces.
+              </p>
+              <div class="row gy-5 list_wrapper">
+                <div class="col-md-12">
+                  <ul class="row row-cols-2 about_ul">
+                    <li class="col about_li">
+                      <span class="about_li_text">Nom:</span> Bruno Silva
+                    </li>
+                    <li class="col about_li">
+                      <span class="about_li_text">Année:</span> 1992
+                    </li>
+                    <li class="col about_li">
+                      <span class="about_li_text">Email:</span>
+                      bruno@bsilva.ch
+                    </li>
+                    <li class="col about_li">
+                      <span class="about_li_text">Disponibilité emploi:</span>
+                      Disponible
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section id="skills">
+        <div class="container-fluid">
+          <h1 class="text-center skills_title">Compétences</h1>
+          <div
+            id="carouselExample"
+            class="carousel slide carousel_wrapper"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <!-- CAROUSEL ROW: N1 -->
+              <div
+                class="carousel-item active logo_container"
+                data-bs-intervale="3000"
+              >
+                <div class="logo_wrapper d-flex justify-content-sm-evenly">
+                  <div>
+                    <i
+                      class="fa-brands fa-git-alt fa-5x skills_logo"
+                      style="color: #f14e32"
+                    ></i>
+                    <p class="skills_text">GIT</p>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-brands fa-github fa-5x skills_logo"
+                      style="color: #e8eaea"
+                    ></i>
+                    <p class="skills_text">GITHUB</p>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-brands fa-npm fa-5x skills_logo"
+                      style="color: #cc3534"
+                    ></i>
+                    <p class="skills_text">NPM</p>
+                  </div>
+                  <div>
+                    <img
+                      src="./public/images/firebase-logo.webp"
+                      class="skills_logo skills_logo_img"
+                    />
+                    <p class="skills_text">FIREBASE</p>
+                  </div>
+                  <div>
+                    <img
+                      src="./public/images/nosql-logo-removebg-preview.webp"
+                      class="skills_logo skills_logo_img"
+                    />
+                    <p class="skills_text">NOSQL</p>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL ROW: N2 -->
+              <div
+                class="carousel-item logo_container"
+                data-bs-intervale="3000"
+              >
+                <div class="logo_wrapper d-flex justify-content-evenly">
+                  <div>
+                    <img
+                      src="./public/images/pyth-logo.webp"
+                      class="skills_logo skills_logo_img"
+                    />
+                    <p class="skills_text">PYTHON</p>
+                  </div>
+                  <div>
+                    <img
+                      src="./public/images/Flask_icon.webp"
+                      class="skills_logo skills_logo_img"
+                    />
+                    <p class="skills_text">FLASK</p>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-brands fa-html5 fa-5x skills_logo"
+                      style="color: #e34c26"
+                    ></i>
+                    <p class="skills_text">HTML</p>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-brands fa-css3-alt fa-5x skills_logo"
+                      style="color: #264de4"
+                    ></i>
+                    <p class="skills_text">CSS</p>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-brands fa-sass fa-5x skills_logo"
+                      style="color: #cc6699"
+                    ></i>
+                    <p class="skills_text">SASS</p>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL ROW: N3 -->
+              <div
+                class="carousel-item logo_container"
+                data-bs-intervale="3000"
+              >
+                <div class="logo_wrapper d-flex justify-content-evenly">
+                  <div>
+                    <i
+                      class="fa-brands fa-square-js fa-5x skills_logo"
+                      style="color: #f0db4f"
+                    ></i>
+                    <p class="skills_text">JAVASCRIPT</p>
+                  </div>
+                  <div>
+                    <img
+                      src="./public/images/ts-removebg-preview.webp"
+                      class="skills_logo skills_logo_img"
+                    />
+                    <p class="skills_text">TYPESCRIPT</p>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-brands fa-vuejs fa-5x skills_logo"
+                      style="color: #42b883"
+                    ></i>
+                    <p class="skills_text">VUE JS</p>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-brands fa-react fa-5x skills_logo"
+                      style="color: #61dbfb"
+                    ></i>
+                    <p class="skills_text">REACT</p>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-brands fa-angular fa-5x skills_logo"
+                      style="color: #c3002f"
+                    ></i>
+                    <p class="skills_text">ANGULAR</p>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL ROW: N4 -->
+              <div
+                class="carousel-item logo_container"
+                data-bs-intervale="3000"
+              >
+                <div class="logo_wrapper d-flex justify-content-evenly">
+                  <div>
+                    <img
+                      src="./public/images/tailwind-removebg-preview.webp"
+                      class="skills_logo skills_logo_img"
+                    />
+                    <p class="skills_text">TAILWIND</p>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-brands fa-bootstrap fa-5x skills_logo"
+                      style="color: #563d7c"
+                    ></i>
+                    <p class="skills_text">BOOTSTRAP</p>
+                  </div>
+                  <div>
+                    <img
+                      src="./public/images/ionlogo-removebg-preview.webp"
+                      class="skills_logo skills_logo_img"
+                    />
+                    <p class="skills_text">IONIC</p>
+                  </div>
+                  <div>
+                    <img
+                      src="./public/images/vuetify-removebg-preview.webp"
+                      class="skills_logo skills_logo_img"
+                    />
+                    <p class="skills_text">VUETIFY</p>
+                  </div>
+                  <div>
+                    <i class="fa-brands fa-wordpress fa-5x skills_logo"></i>
+                    <p class="skills_text">WORDPRESS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CAROUSEL ARROW BTNs -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next carousel_btn_el"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO SECTION -->
+      <section id="portfolio">
+        <h1 class="portfolio_title">Portfolio</h1>
+        <div class="container row row-cols-2 row-cols-sm-1 box_wrapper">
+          <div id="box1" class="box box1">
+            <button class="overlay_btn" data-target="overlay1">&plus;</button>
+            <div id="overlay1" class="overlay">
+              <h3 class="overlay_title">GAMING TECH WEBSITE</h3>
+              <p class="overlay_text">
+                Il s'agit de mon projet personnel de loisir visant à créer un
+                site web sur les jeux vidéo et la technologie afin de partager
+                des actualités, des astuces, des conseils et bien plus encore
+                avec tous les joueurs et passionnés de technologie, tout comme
+                moi.
+              </p>
+              <div class="portfolio_icons d-flex justify-content-between">
+                <a
+                  href="https://teclexi.com/home/"
+                  target="_blank"
+                  type="button"
+                  class="visite_btn"
+                  >Visite page</a
+                >
+              </div>
+            </div>
+          </div>
+          <div id="box2" class="box box2">
+            <button class="overlay_btn" data-target="overlay2">&plus;</button>
+            <div id="overlay2" class="overlay">
+              <h3 class="overlay_title">BANKING LANDING PAGE</h3>
+              <p class="overlay_text">
+                Ce site web a été achevé à la fin de l'année 2022 dans le cadre
+                de mon cours complet sur JavaScript sur Udemy. Il a servi de
+                projet pour le cours.
+              </p>
+              <div class="portfolio_icons d-flex justify-content-between">
+                <a href="" target="_blank"
+                  ><i class="fab fa-brands fa-github fa-3x"></i
+                ></a>
+                <a href="" target="_blank" type="button" class="visite_btn"
+                  >Visite page</a
+                >
+              </div>
+            </div>
+          </div>
+          <div id="box3" class="box box3">
+            <button class="overlay_btn" data-target="overlay3">&plus;</button>
+            <div id="overlay3" class="overlay">
+              <h3 class="overlay_title">title</h3>
+              <p class="overlay_text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti ratione maiores voluptas at, et a ipsa incidunt sunt,
+                possimus animi magnam distinctio ullam voluptatum, provident
+                aspernatur itaque iure! Vel, laborum.
+              </p>
+              <div class="portfolio_icons d-flex justify-content-between">
+                <a href="" target="_blank"
+                  ><i class="fab fa-brands fa-github fa-3x"></i
+                ></a>
+                <a
+                  href="https://gee.bsilva.ch/"
+                  target="_blank"
+                  type="button"
+                  class="visite_btn"
+                  >Visite page</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- <div id="box4" class="box box4">
+            <button class="overlay_btn" data-target="overlay4">&plus;</button>
+            <div id="overlay4" class="overlay">
+              <h3 class="overlay_title">title</h3>
+              <p class="overlay_text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti ratione maiores voluptas at, et a ipsa incidunt sunt,
+                possimus animi magnam distinctio ullam voluptatum, provident
+                aspernatur itaque iure! Vel, laborum.
+              </p>
+              <div class="portfolio_icons d-flex justify-content-between">
+                <a href="" target="_blank"
+                  ><i class="fab fa-brands fa-github fa-3x"></i
+                ></a>
+                <a href="" target="_blank" type="button" class="visite_btn"
+                  >Visite page</a
+                >
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact">
+        <div class="container mt-3 contactContent">
+          <h1 class="text-center contact_title">Contactez-moi</h1>
+          <div class="col-lg-6 form-container form_wrapper">
+            <!-- form fields -->
+            <form action="https://formspree.io/f/mzblojlo" method="POST">
+              <!-- form username -->
+              <input
+                name="username"
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Nom"
+                required
+              />
+              <!-- form email -->
+              <input
+                name="email"
+                type="email"
+                class="form-control mt-3"
+                placeholder="Email"
+                required
+              />
+              <!-- form message -->
+              <div class="mb-3 mt-3">
+                <textarea
+                  name="message"
+                  class="form-control"
+                  rows="5"
+                  id="comment"
+                  placeholder="Détails supplémentaires"
+                ></textarea>
+              </div>
+            </form>
+            <input
+              type="submit"
+              id="submitBtn"
+              value="Envoyer"
+              class="btn btn-success mt-3"
+            />
+          </div>
+        </div>
+
+        <!-- CONTACT SUB-SECTION: FOOTER-->
+        <footer id="footer">
+          <div class="container-fluid d-flex justify-content-between">
+            <!-- AUTHOR RIGHTS -->
+            <div class="rights d-flex" style="align-items: end">
+              <p>© Copyright by B.Silva. All rights reserved.</p>
+            </div>
+
+            <!-- SOCILA MEDIA ICONS -->
+            <div class="social-icons">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fab fa-facebook fa-sm"></i
+              ></a>
+              <a href="https://twitter.com/3run0Silva" target="_blank"
+                ><i class="fab fa-brands fa-x-twitter fa-sm"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/3runosilva/" target="_blank"
+                ><i class="fab fa-linkedin fa-sm"></i
+              ></a>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </div>
+    <script type="module" src="./script.js"></script>
+    <!-- <script src="script.min.js"></script> -->
+  </body>
+</html>
